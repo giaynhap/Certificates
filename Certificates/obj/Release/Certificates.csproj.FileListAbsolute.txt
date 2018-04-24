@@ -1,0 +1,7 @@
+C:\Users\GiayNhap\documents\visual studio 2015\Projects\Certificates\Certificates\bin\Release\Certificates.exe.config
+C:\Users\GiayNhap\documents\visual studio 2015\Projects\Certificates\Certificates\bin\Release\Certificates.exe
+C:\Users\GiayNhap\documents\visual studio 2015\Projects\Certificates\Certificates\bin\Release\Certificates.pdb
+C:\Users\GiayNhap\documents\visual studio 2015\Projects\Certificates\Certificates\bin\Release\itextsharp.dll
+C:\Users\GiayNhap\documents\visual studio 2015\Projects\Certificates\Certificates\bin\Release\itextsharp.xml
+C:\Users\GiayNhap\documents\visual studio 2015\Projects\Certificates\Certificates\obj\Release\Certificates.exe
+C:\Users\GiayNhap\documents\visual studio 2015\Projects\Certificates\Certificates\obj\Release\Certificates.pdb

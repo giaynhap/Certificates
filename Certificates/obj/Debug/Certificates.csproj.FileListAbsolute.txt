@@ -1,0 +1,8 @@
+c:\users\giaynhap\documents\visual studio 2015\Projects\Certificates\Certificates\bin\Debug\Certificates.exe.config
+c:\users\giaynhap\documents\visual studio 2015\Projects\Certificates\Certificates\obj\Debug\Certificates.csprojResolveAssemblyReference.cache
+c:\users\giaynhap\documents\visual studio 2015\Projects\Certificates\Certificates\bin\Debug\Certificates.exe
+c:\users\giaynhap\documents\visual studio 2015\Projects\Certificates\Certificates\bin\Debug\Certificates.pdb
+c:\users\giaynhap\documents\visual studio 2015\Projects\Certificates\Certificates\bin\Debug\itextsharp.dll
+c:\users\giaynhap\documents\visual studio 2015\Projects\Certificates\Certificates\bin\Debug\itextsharp.xml
+c:\users\giaynhap\documents\visual studio 2015\Projects\Certificates\Certificates\obj\Debug\Certificates.exe
+c:\users\giaynhap\documents\visual studio 2015\Projects\Certificates\Certificates\obj\Debug\Certificates.pdb
