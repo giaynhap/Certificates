@@ -29,17 +29,20 @@ namespace Certificates
            // design.setFont("Tahoma", 12);
             design.getFont().Size = 10;
             design.setLocation("KMA");
-            design.setRect(5, 0, 500, 20);
-            design.setTextColor(70, 70, 70);
+            design.setTextColor(70, 70, 240);
             design.setPage(1);
 
 
             KMACertificate cert = new KMACertificate();
             cert.loadFromStore();
 
-            design.appendText("@KÝ SỐ BỞI " + cert.getSubjectByKey("CN"));
-      
-            var inx = args[0];
+            design.appendText(new TextNode("Đã được ký điện tử bởi",1,11));
+            design.appendText(new TextNode("(Signed digitally by)",0,8));
+            design.appendText(new TextNode(" "));
+            design.appendText(new TextNode(" "));
+            design.appendText(new TextNode(cert.getSubjectByKey("CN"), 1, 11));
+
+            var inx = @"C:/Users/GiayNhap/Desktop/HoangDuong_Mau1.pdf";//args[0];
             string fileName = Path.GetFileNameWithoutExtension(inx);
             string folderPath = Path.GetDirectoryName(inx);
             string outx = folderPath + "\\" + fileName + "_Signed.pdf";
@@ -48,8 +51,7 @@ namespace Certificates
            // InspectSignatures(outx);
 
             cert.SignPdf(inx, outx, design);
-            Console.ReadKey();
-            
+       
 
 
         }

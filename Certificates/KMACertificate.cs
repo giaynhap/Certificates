@@ -119,7 +119,7 @@ namespace Certificates
             signatureAppearance.SignDate = DateTime.Now;
             signatureAppearance.Layer2Font = design.getFont();
             signatureAppearance.Layer2Font.SetColor(design.getColor().r, design.getColor().g, design.getColor().b);
-            signatureAppearance.Layer2Text = design.getString();
+      
           //  signatureAppearance.SetVisibleSignature(design.getRect(),design.getPage(), null);
 
 
@@ -134,15 +134,7 @@ namespace Certificates
             sig.SetWidget(design.getRect(), null);
             sig.SetHighlighting(PdfAnnotation.HIGHLIGHT_NONE);
             sig.Color = new BaseColor(design.getColor().r, design.getColor().g, design.getColor().b);
-            sig.FieldName = design.getString();
-            TextField field = new TextField(stamper.Writer, new iTextSharp.text.Rectangle(40, 500, 360, 530), "some_text");
-
-            sig.AddKid(field.GetTextField());
-          
-
-
-
-            sig.Title = design.getString(); 
+           
             // sig.SetFlags(PdfAnnotation.FLAGS_READONLY | PdfAnnotation.FLAGS_PRINT);
             //sig.SetFieldName("sig3");
             //sig.SetPage(page);
@@ -209,11 +201,38 @@ namespace Certificates
             PdfContentByte overContent = pdfStamper.GetOverContent(page );
  
             ColumnText col = new ColumnText(overContent);
-            col.SetSimpleColumn(design.getRect());
-            col.Alignment = Element.ALIGN_BOTTOM;
-        
+            var y = 60;
+            col.SetSimpleColumn(360
+                , y, 360+200, y + 100,20, Element.ALIGN_TOP);
+
+
+
+            for (int i = 0; i < design.texts.Count; i++)
+            {
+                col.Alignment = Element.ALIGN_CENTER;
+                Font font = design.getFont();
+                font.Size = design.texts[i].fontSize;
+                font.SetStyle(design.texts[i].style);
+     
+                Chunk hello = new Chunk(design.texts[i].text, font);
+                Phrase phrase = new Phrase();
+                phrase.Add(hello);
+                phrase.Font = font;                
+
+
+                PdfPTable table = new PdfPTable(1);
+                PdfPCell cell = new PdfPCell(phrase);
+                cell.Border =0;
+                cell.HorizontalAlignment =Element.ALIGN_CENTER; 
+                cell.VerticalAlignment = Element.ALIGN_TOP; 
+                table.AddCell(cell);
+                col.AddElement(table);
+
+            }
+
            
-            col.AddElement(  new Phrase(design.getString(), design.getFont()));
+          
+         
             col.Go();
              
         }

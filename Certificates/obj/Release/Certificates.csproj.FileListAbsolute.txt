@@ -5,3 +5,4 @@ C:\Users\GiayNhap\documents\visual studio 2015\Projects\Certificates\Certificate
 C:\Users\GiayNhap\documents\visual studio 2015\Projects\Certificates\Certificates\bin\Release\itextsharp.xml
 C:\Users\GiayNhap\documents\visual studio 2015\Projects\Certificates\Certificates\obj\Release\Certificates.exe
 C:\Users\GiayNhap\documents\visual studio 2015\Projects\Certificates\Certificates\obj\Release\Certificates.pdb
+C:\Users\GiayNhap\Documents\Visual Studio 2015\Projects\Certificates\Certificates\obj\Release\Certificates.csprojResolveAssemblyReference.cache

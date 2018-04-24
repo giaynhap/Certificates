@@ -26,7 +26,7 @@ namespace Certificates
     class DesignSign
     {
 
-        List<string> texts;
+       public List<TextNode> texts;
         string location;
         iTextSharp.text.Font font;
         iTextSharp.text.Rectangle rect;
@@ -75,9 +75,9 @@ namespace Certificates
         {
             return this.rect;
         }
-        public void appendText(string text)
+        public void appendText(TextNode text)
         {
-            if (texts == null) texts = new List<string>();
+            if (texts == null) texts = new List<TextNode>();
             texts.Add(text);
         }
         public void setTextColor(int r,int g,int b)
@@ -87,18 +87,7 @@ namespace Certificates
             mColor.b = b;
         }
         // make string
-        public string getString()
-        {
-            var text = "";
-            for (int i = 0;i < this.texts.Count;i++)
-            {
-                if (text.Length > 0)
-                    text += "\n" + texts[i];
-                else
-                    text = texts[i];
-            }
-            return text;
-        }
+       
 
     }
 }
